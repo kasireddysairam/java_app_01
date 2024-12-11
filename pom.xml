@@ -26,7 +26,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2021.0.6</version> <!-- Managed Spring Cloud version -->
+                <version>2021.0.6</version> <!-- Compatible with Spring Boot 2.7.x -->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -50,6 +50,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
+            <version>2.1.5</version> <!-- Explicit version to avoid resolution errors -->
         </dependency>
 
         <!-- Lombok Dependency -->
