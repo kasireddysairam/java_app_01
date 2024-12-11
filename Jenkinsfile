@@ -4,7 +4,10 @@
 @Library('jenkins_shared_library') _
 pipeline {
     agent any 
-
+    
+    environment {
+        GIT_CREDENTIALS = 'github_cred' // The ID of the credentials created in Jenkins
+    }
       stages{
         stage('Git checkout code'){
             steps{
@@ -13,6 +16,7 @@ pipeline {
                 gitCheckout(
                   branch: "main" ,
                   url: "https://github.com/kasireddysairam/java_app_01.git"
+                  credentialsId: env.GIT_CREDENTIALS
                  
                 )
 
