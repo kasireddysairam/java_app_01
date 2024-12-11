@@ -6,8 +6,11 @@ pipeline {
     agent any 
     
     environment {
-        GIT_CREDENTIALS = 'github_cred' // The ID of the credentials created in Jenkins
+        GIT_CREDENTIALS = 'github_cred' 
     }
+
+    tools {
+        maven 'maven'  
       stages{
         stage('Git checkout code'){
             steps{
