@@ -1,3 +1,7 @@
+
+
+
+@Library('jenkins_shared_library') _
 pipeline {
     agent any 
 
@@ -6,7 +10,11 @@ pipeline {
             steps{
                  echo 'Checking out code from Git...'
                 script{
-                 git branch: 'main', credentialsId: 'github_cred', url: 'https://github.com/kasireddysairam/java_app_01.git'
+                gitCheckout(
+                  branch: "main"
+                  url: "https://github.com/kasireddysairam/java_app_01.git"
+                  credentialsId: "github_cred"
+                )
 
                 }
             }
