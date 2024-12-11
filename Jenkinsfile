@@ -29,9 +29,19 @@ pipeline {
                }
             }
         }
-
-
-
+    stage('Integration Test maven'){
+            steps{
+               script{
+                   stage('Unit Test maven'){
+            steps{
+               script{
+                   mvnIntegrationTest()
+               }
+            }
+        }
+               
+            
+    
 
       }
 }
