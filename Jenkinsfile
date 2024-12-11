@@ -6,7 +6,7 @@ pipeline {
             steps{
                  echo 'Checking out code from Git...'
                 script{
-                 git branch: 'main', url: 'https://github.com/kasireddysairam/java_app_01.git'
+                 git branch: 'main', credentialsId: 'github_cred', url: 'https://github.com/kasireddysairam/java_app_01.git'
 
                 }
             }
