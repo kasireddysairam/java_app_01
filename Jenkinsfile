@@ -35,7 +35,16 @@ pipeline {
                }
             }
         }
-               
+       stage('Quality gate Analysis SonarQube'){
+        when { expression { param.action == 'create'}}
+            steps{
+               script{
+                  vars/staticcodeAnalysis()
+            }
+        }
+
+
+          
             
     
 
