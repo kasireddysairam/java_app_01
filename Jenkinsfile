@@ -9,9 +9,7 @@ pipeline {
         GIT_CREDENTIALS = 'github_cred' 
     }
 
-    tools {
-        maven 'maven'  
-    }
+   
       stages{
         stage('Git checkout code'){
             steps{
