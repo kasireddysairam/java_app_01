@@ -5,10 +5,7 @@
 pipeline {
     agent any 
     
-    environment {
-        GIT_CREDENTIALS = 'github_cred' 
-    }
-
+   
    
       stages{
         stage('Git checkout code'){
@@ -18,7 +15,7 @@ pipeline {
                 gitCheckout(
                   branch: "main" ,
                   url: "https://github.com/kasireddysairam/java_app_01.git" ,
-                  credentialsId: env.GIT_CREDENTIALS
+                 
                  
                 )
 
