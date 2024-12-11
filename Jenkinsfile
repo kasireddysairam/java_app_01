@@ -39,7 +39,7 @@ pipeline {
             when { expression { params.action == 'create'}}
             steps{
                script{
-                   def sonarqubecred = 'sonar-api'
+                   def sonarqubecred = 'sonarqube-token'
                  staticcodeAnalysis(sonarqubecred)
             }
         }
