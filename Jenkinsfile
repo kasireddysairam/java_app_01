@@ -39,7 +39,7 @@ pipeline {
             when { expression { params.action == 'create'}}
             steps{
                script{
-                   def sonarqubecred = 'sonarqube_cred' # sonarqube creditional password name
+                   def sonarqubecred = 'sonarqube_cred' 
                  staticcodeAnalysis(sonarqubecred)
             }
         }
