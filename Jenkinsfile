@@ -73,6 +73,7 @@ pipeline {
          when { expression {  params.action == 'create' } }
             steps{
                script{
+                   dir('sudo su')
                    dockerBuild("${params.ImageName}","${params.ImageTag}","${params.DockerHubUser}")
                }
             }
